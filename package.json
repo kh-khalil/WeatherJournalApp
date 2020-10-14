@@ -18,9 +18,9 @@
     "url": "git+https://github.com/kh-khalil/WeatherJournalApp.git"
   },
   "author": "Khaled Khalil",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/kh-khalil/WeatherJournalApp/issues"
   },
-  "homepage": "https://github.com/kh-khalil/WeatherJournalApp/blob/main/docs/index.html"
+  "homepage": "https://github.com/kh-khalil/WeatherJournalApp/docs#index"
 }
