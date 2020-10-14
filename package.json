@@ -17,9 +17,6 @@
     "type": "git",
     "url": "git+https://github.com/kh-khalil/WeatherJournalApp.git"
   },
-  "publishConfig": { 
-    "registry": "https://npm.pkg.github.com/" 
-  },
   "author": "Khaled Khalil",
   "license": "ISC",
   "bugs": {
