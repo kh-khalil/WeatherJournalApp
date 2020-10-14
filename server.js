@@ -1,5 +1,7 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+projectData = {
+    tempData:[]
+};
 
 // Require Express to run server and routes
 const express = require('express');
@@ -27,11 +29,11 @@ const port = 3000;
 const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`)});
 
 // Create JS array
-const tempData = [];
+// const projectData.tempData = [];
 // Respond with JS object when a GET request is made to the homepage
 app.get('/all', (req, res) => {
-    res.send(tempData);
-    console.log(tempData);
+    res.send(projectData.tempData);
+    console.log(projectData.tempData);
 });
 
 
@@ -42,7 +44,7 @@ app.post('/addTemp', (req, res) => {
         temp: req.body.temp,
         feeling: req.body.feeling,
     }
-    tempData.push(newEntry);
-    res.send(tempData);
-    // console.log(tempData);
+    projectData.tempData.push(newEntry);
+    res.send(projectData.tempData);
+    // console.log(projectData.tempData);
 });

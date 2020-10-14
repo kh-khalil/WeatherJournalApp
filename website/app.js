@@ -19,7 +19,7 @@ generate.addEventListener('click', (e) => {
     getTemp(baseURL, zipCode, apiKey)
     .then(
         (data) =>
-            postData('/addTemp', {city:data.name, date:newDate, temp:data.main.temp, feeling})
+            postData('/addTemp', {city:data.name + ` City`, date:newDate, temp:data.main.temp + ` Fahrenheit`, feeling})
     )
     .then(
         updateUI
@@ -31,7 +31,7 @@ generate.addEventListener('click', (e) => {
 });
 
 const getTemp = async (baseURL, zipCode, apiKey)=>{
-    const res = await fetch(`${baseURL}${zipCode}&appid=${apiKey}&units=metric`);
+    const res = await fetch(`${baseURL}${zipCode}&appid=${apiKey}&units=imperial`);
     // console.log(res);
     try {
         if (res.status === 404){
